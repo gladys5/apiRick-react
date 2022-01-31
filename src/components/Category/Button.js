@@ -29,7 +29,7 @@ const Button = ({name, index, items, task, setPageNumber}) => {
                
                
                />
-                 <label className='btn btn-uotline-primary' for={`${name}-${index}`} >{items}</label> 
+                 <label className='btn btn-uotline-primary' htmlFor={`${name}-${index}`} >{items}</label> 
             </div>
            
            

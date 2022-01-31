@@ -7,13 +7,13 @@ import "./Search.scss"
         };
          return (
            
-             <form  className=" d-flex justify-content-center gap-4 mb-5">
+             <form  className=" d-flex justify-content-center gap-4 mb-5 ">
                      <input className="input"  
                        onChange={(e)=>{
                         setPageNumber(1);
                         setSearch(e.target.value);
                        }} 
-                         placeholder="Search for Character" 
+                         placeholder="Search for Character " 
                        type="text" className=""
                      />
                     <button onClick={searchBtn}

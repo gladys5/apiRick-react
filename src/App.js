@@ -8,6 +8,8 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import Pagination from "./components/Pagination/Pagination"
 import Search from "./components/Search/Search";
+import Navbar from "./Navbar/Navbar";
+import { BrowserRouter,Routes,Router,Route} from "react-router-dom";
 //import ReactPaginate from "react-paginate";
 
 function App() {
@@ -39,9 +41,12 @@ useEffect(()=>{
 
   return (
     <div className="App">
+      <Navbar/>
+       
+
+
+     
       
-     <h1 className="text-center ubuntu my-4" >
-       Rick <span className="text-primary  my-4"> & </span> Morty </h1>
         <Search 
           setPageNumber={setPageNumber} 
           setSearch={setSearch}
