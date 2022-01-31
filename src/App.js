@@ -40,8 +40,8 @@ useEffect(()=>{
   return (
     <div className="App">
       
-     <h1 className="text-center  my-4">
-       Rick & Morty Aplication </h1>
+     <h1 className="text-center ubuntu my-4" >
+       Rick <span className="text-primary  my-4"> & </span> Morty </h1>
         <Search 
           setPageNumber={setPageNumber} 
           setSearch={setSearch}

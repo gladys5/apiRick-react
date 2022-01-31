@@ -1,20 +1,6 @@
 body {
   margin: 0;
-  background-image: linear-gradient(
-    to left bottom,
-    #d1ad6b,
-    #db8e62,
-    #dc6e6d,
-    #cb5484,
-    #a34b9f,
-    #895fba,
-    #6171cf,
-    #0081da,
-    #00a2ed,
-    #00c2f4,
-    #00dff4,
-    #5ffbf1
-  );
+  
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

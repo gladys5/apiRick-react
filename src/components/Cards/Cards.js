@@ -1,4 +1,5 @@
 import React from 'react'
+import  "./Cards.scss"
 
 
 
@@ -10,9 +11,9 @@ const Cards = ({ results }) => {
                let {id, name, image, location, status } = X;
                return ( 
             
-               <div key={id} className="col-4 position-relative">
+               <div key={id} className="col-4 mb-4 position-relative">
                  
-                   <div className="borde">
+                   <div className=" cards">
                      <img src={image} alt="" className="img-fluid" />
                       <div className="content">
                         <div className="fs-4 fw-bold mb-4">{name}</div>
@@ -24,19 +25,19 @@ const Cards = ({ results }) => {
                    </div> 
 
                   {(()=>{
-                    if(status==="dead"){
+                    if(status==="Dead"){
                       return(
-                        <div className= "position-absolute bg-danger">{status}</div>
+                        <div className= "position-absolute badge bg-danger">{status}</div>
                       )
                     }
                     else if(status==="Alive"){
                       return(
-                        <div className= "position-absolute bg-success">{status}</div>
+                        <div className= "position-absolute  badge bg-success">{status}</div>
                       )
                     } 
                     else{
                       return(
-                        <div className= "position-absolute bg-secondary">{status}</div>
+                        <div className= "position-absolute badge bg-secondary">{status}</div>
                       )
                     }
             
