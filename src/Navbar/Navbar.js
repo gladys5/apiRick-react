@@ -1,10 +1,15 @@
 import React from 'react';
+import { NavLink,Link } from 'react-router-dom';
+import "../Navbar/Navbar.scss" 
 
 const Navbar = () => {
   return (
-       <div><nav className="navbar navbar-expand-lg navbar-light bg-light">
+       <div><nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
        <div className="container">
-     <h1 className="fs-3 ubuntu navbar-brand " >  Rick <span className="text-primary  my-4"> & </span> Morty </h1>
+     <Link to="/" className="fs-3 ubuntu navbar-brand " > 
+      Rick <span className="text-primary  my-4"> 
+         & 
+      </span> Morty </Link>
 
 
 
@@ -19,12 +24,17 @@ const Navbar = () => {
          </button>
          <div className="collapse navbar-collapse justify-content-end"
                 id="navbarNavAltMarkup">
-           <div className="navbar-nav">
-                   <a className="nav-link active"
-                     aria-current="page" href="#">Home</a>
-                   <a className="nav-link" href="#">Features</a>
-                  <a className="nav-link" href="#">Pricing</a>
-                  <a className="nav-link disabled">Disabled</a>
+           <div className="navbar-nav fs-5">
+                      <NavLink activeClassName = "active"  to="/" className="nav-link active">
+                             Characters
+                     </NavLink>
+                      <NavLink  to="/episodes" className="nav-link">
+                        Episodes
+                     </NavLink>
+                      <NavLink to="/location" className="nav-link" >
+                         Location
+                     </NavLink>
+                  
            </div>
          </div>
        </div>

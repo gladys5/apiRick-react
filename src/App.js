@@ -1,6 +1,6 @@
 //import React,{useState}from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css'
+
 import "bootstrap/dist/js/bootstrap";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
@@ -9,10 +9,31 @@ import { useEffect, useState } from "react";
 import Pagination from "./components/Pagination/Pagination"
 import Search from "./components/Search/Search";
 import Navbar from "./Navbar/Navbar";
-import { BrowserRouter,Routes,Router,Route} from "react-router-dom";
+import { HashRouter , Routes,Route} from "react-router-dom";
+import Episodes from "./components/pages/Episodes";
+import Location from "./components/pages/Location";
 //import ReactPaginate from "react-paginate";
 
-function App() {
+
+function App(){
+  return(
+    
+      <HashRouter>
+        <div className="App">
+           <Navbar/>
+        </div>
+        <Routes path="" element ={<Location/>}>
+           <Route path="/" element={<Home/> }/>
+           <Route path="/" element={<Episodes/>} />
+        </Routes>
+      </HashRouter>
+    
+  )
+}
+
+
+
+const Home=()=>{
   let [axiosData,setAxiosData]=useState([])
   let {info,results}= axiosData
   let [pageNumber,setPageNumber]=useState(1)
@@ -20,6 +41,7 @@ function App() {
   let [status,setStatus]=useState("")
   let [gender,setGender]=useState("")
   let [species,setSpecies]=useState("")
+
 
    //console.log(pageNumber)
 
@@ -41,7 +63,7 @@ useEffect(()=>{
 
   return (
     <div className="App">
-      <Navbar/>
+     
        
 
 
